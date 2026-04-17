@@ -2,7 +2,7 @@
 **Học viên:** Hàn Quang Hiếu  
 **Mã học viên:** 2A202600056  
 **Ngày hoàn thành:** 2026-04-17  
-**Dự án:** Team_20.5_project — Chatbot hỗ trợ tài xế và hành khách Xanh SM
+**Dự án:** day12_HanQuangHieu_2A202600056 — Chatbot hỗ trợ tài xế và hành khách Xanh SM
 
 ---
 
@@ -374,7 +374,7 @@ Railway tự inject `$PORT` env var. Flag `--headless` là bắt buộc để Ch
 
 ### Bước 1: Push code lên GitHub
 ```bash
-cd Team_20.5_project
+cd day12_HanQuangHieu_2A202600056
 git init   # nếu chưa có git
 git add .
 git commit -m "feat: add production deployment (Day 12)"
@@ -442,7 +442,7 @@ Các biến khác đã được khai báo trong `render.yaml`.
 Chạy toàn bộ stack local (bot + redis):
 
 ```bash
-cd Team_20.5_project
+cd day12_HanQuangHieu_2A202600056
 
 # 1. Tạo file .env
 cp .env.example .env

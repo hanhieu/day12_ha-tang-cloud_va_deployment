@@ -1,120 +1,149 @@
-# Day 12 — Deployment: Đưa Agent Lên Cloud
+# XanhSM AI Support Chatbot
 
-> **AICB-P1 · VinUniversity 2026**  
-> Repository thực hành đi kèm bài giảng Day 12.  
-> Mỗi phần có ví dụ **cơ bản** (hiểu concept) và **chuyên sâu** (production-ready).
+Chatbot AI hỗ trợ khách hàng và tài xế **Xanh SM**, phân loại theo vai trò (Hành khách, Tài xế Taxi, Tài xế Bike, Nhà hàng).  
+Dùng RAG + GPT-4o để trả lời từ knowledge base chính thức. Có tool calling tra cứu giá cước thực tế theo thành phố.
 
----
-
-## Submission — Hàn Quang Hiếu (2A202600056)
-
-| Artifact | Link |
-|---|---|
-| **Source code** | [`day12_HanQuangHieu_2A202600056/`](day12_HanQuangHieu_2A202600056/) |
-| **Deployment report** | [`REPORT_HAN_QUANG_HIEU.md`](REPORT_HAN_QUANG_HIEU.md) |
-| **In-folder report** | [`day12_HanQuangHieu_2A202600056/DEPLOYMENT_REPORT_HAN_QUANG_HIEU.md`](day12_HanQuangHieu_2A202600056/DEPLOYMENT_REPORT_HAN_QUANG_HIEU.md) |
-| **Mission answers** | [`MISSION_ANSWERS.md`](MISSION_ANSWERS.md) |
+**Live URL:** https://day12-hanquanghieu-2a202600056-production.up.railway.app/
 
 ---
 
-## Cấu Trúc Project
+## Prerequisites
 
-```
-day12_ha-tang-cloud_va_deployment/
-├── 01-localhost-vs-production/     # Section 1: Dev ≠ Production
-│   ├── develop/                      #   Agent "đúng kiểu localhost"
-│   └── production/                   #   12-Factor compliant agent
-│
-├── 02-docker/                      # Section 2: Containerization
-│   ├── develop/                      #   Dockerfile đơn giản
-│   └── production/                   #   Multi-stage + Docker Compose stack
-│
-├── 03-cloud-deployment/            # Section 3: Cloud Options
-│   ├── railway/                    #   Deploy Railway (< 5 phút)
-│   ├── render/                     #   Deploy Render + render.yaml
-│   └── production-cloud-run/         #   GCP Cloud Run + CI/CD
-│
-├── 04-api-gateway/                 # Section 4: Security
-│   ├── develop/                      #   API Key authentication
-│   └── production/                   #   JWT + Rate Limiting + Cost Guard
-│
-├── 05-scaling-reliability/         # Section 5: Scale & Reliability
-│   ├── develop/                      #   Health check + graceful shutdown
-│   └── production/                   #   Stateless + Redis + Nginx LB
-│
-├── 06-lab-complete/                # Lab 12: Production-ready agent
-│   └── (full project kết hợp tất cả)
-│
-└── utils/                          # Mock LLM dùng chung (không cần API key)
-```
+- [Docker](https://docs.docker.com/get-docker/) & Docker Compose v2
+- An **OpenAI API key** (required — the bot calls GPT-4o)
 
 ---
 
-## 🚀 Bắt Đầu Nhanh
-
-**Muốn thử ngay?** → [QUICK_START.md](QUICK_START.md) (5 phút)
-
-**Muốn học kỹ?** → [CODE_LAB.md](CODE_LAB.md) (3-4 giờ)
-
-## Cách Học
-
-| Bước | Làm gì |
-|------|--------|
-| 0 | **[Khuyến nghị]** Đọc [QUICK_START.md](QUICK_START.md) để thử nhanh |
-| 1 | Đọc [CODE_LAB.md](CODE_LAB.md) để hiểu chi tiết |
-| 2 | Chạy ví dụ **basic** trước — hiểu concept |
-| 3 | So sánh với ví dụ **advanced** — thấy sự khác biệt |
-| 4 | Tự làm Lab 06 từ đầu trước khi xem solution |
-| 5 | Tham khảo [QUICK_REFERENCE.md](QUICK_REFERENCE.md) khi cần |
-| 6 | Xem [TROUBLESHOOTING.md](TROUBLESHOOTING.md) khi gặp lỗi |
-
----
-
-## Yêu Cầu
+## Quickstart (Docker Compose — recommended)
 
 ```bash
-python 3.11+
-docker & docker compose
+# 1. Clone and enter the project folder
+git clone <repo-url>
+cd day12_HanQuangHieu_2A202600056
+
+# 2. Copy the env template and add your OpenAI key
+cp .env.example .env
+# Open .env and set:  OPENAI_API_KEY=sk-...your-key...
+
+# 3. Build and start
+docker compose up --build
+
+# 4. Open the chatbot
+#    http://localhost:8000
 ```
 
-Mỗi folder có `requirements.txt` riêng. Không cần API key thật — các ví dụ dùng **mock LLM** để chạy offline.
+> First startup takes ~90 seconds while the SBERT embedding model downloads and ChromaDB ingests 112 FAQ documents. Wait for the log line: `{"event": "ready"}`.
 
 ---
 
-## Sections
+## Verify it's working
 
-| # | Folder | Concept chính |
-|---|--------|--------------|
-| 1 | `01-localhost-vs-production` | Dev/prod gap, 12-factor, secrets |
-| 2 | `02-docker` | Dockerfile, multi-stage, docker-compose |
-| 3 | `03-cloud-deployment` | Railway, Render, Cloud Run |
-| 4 | `04-api-gateway` | Auth, rate limiting, cost protection |
-| 5 | `05-scaling-reliability` | Health check, stateless, rolling deploy |
-| 6 | `06-lab-complete` | **Full production agent** |
+```bash
+# Health check — should return {"status":"ok", ...}
+curl http://localhost:8000/health
+
+# Readiness probe — returns {"ready":true} after startup completes
+curl http://localhost:8000/ready
+
+# Metrics
+curl http://localhost:8000/metrics
+```
 
 ---
 
-## 📚 Lab Materials
+## Environment Variables
 
-Chúng tôi đã chuẩn bị đầy đủ tài liệu hướng dẫn:
+Copy `.env.example` to `.env`. Only `OPENAI_API_KEY` is required to run locally.
 
-### Cho Sinh Viên
+| Variable | Default | Description |
+|---|---|---|
+| `OPENAI_API_KEY` | *(required)* | Your OpenAI API key |
+| `PORT` | `8000` | Server port |
+| `AUTH_ENABLED` | `false` | Set `true` to enable login screen |
+| `BOT_USERNAME` | `admin` | Login username (when AUTH_ENABLED=true) |
+| `BOT_PASSWORD` | `changeme` | Login password (when AUTH_ENABLED=true) |
+| `CHAINLIT_AUTH_SECRET` | — | Required when AUTH_ENABLED=true (random 32-char string) |
+| `DAILY_BUDGET_USD` | `5.0` | Max OpenAI spend per day in USD |
+| `RATE_LIMIT_PER_MINUTE` | `10` | Max messages per user per minute |
+| `REDIS_URL` | *(auto in compose)* | Redis for cross-instance state |
 
-| Tài liệu | Mô tả | Thời gian |
-|----------|-------|-----------|
-| **[CODE_LAB.md](CODE_LAB.md)** | Hướng dẫn lab chi tiết từng bước | 3-4 giờ |
-| **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** | Cheat sheet các lệnh và patterns | Tra cứu |
-| **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** | Giải quyết lỗi thường gặp | Khi cần |
+---
 
-### Cho Giảng Viên
+## Run without Docker (local Python)
 
-| Tài liệu | Mô tả |
-|----------|-------|
-| **[INSTRUCTOR_GUIDE.md](INSTRUCTOR_GUIDE.md)** | Hướng dẫn chấm điểm và đánh giá |
+```bash
+# Requires Python 3.11+
+cd day12_HanQuangHieu_2A202600056
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 
-### Cách Sử Dụng
+cp .env.example .env
+# Edit .env — set OPENAI_API_KEY
 
-1. **Trước lab:** Đọc [CODE_LAB.md](CODE_LAB.md) để hiểu tổng quan
-2. **Trong lab:** Làm theo từng Part, tham khảo [QUICK_REFERENCE.md](QUICK_REFERENCE.md)
-3. **Gặp lỗi:** Xem [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
-4. **Sau lab:** Nộp Part 6 Final Project để chấm điểm
+chainlit run app.py --host 0.0.0.0 --port 8000 --headless
+```
+
+---
+
+## Stop
+
+```bash
+docker compose down
+```
+
+To also delete persisted data (ChromaDB + feedback):
+```bash
+docker compose down -v
+```
+
+---
+
+## Project Structure
+
+```
+day12_HanQuangHieu_2A202600056/
+├── app.py                  # Chainlit entry point (auth, health, logging)
+├── config.py               # All config from environment (12-factor)
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml      # Bot + Redis
+├── railway.toml            # Railway deployment config
+├── render.yaml             # Render deployment config
+├── .env.example            # Environment template
+├── bot/
+│   ├── router.py           # Intent routing
+│   ├── handlers/           # chat, onboarding, driver_registration
+│   ├── middleware/         # rate_limiter.py, cost_guard.py
+│   └── tools/              # fare_data, intent_detector, query_rewriter
+├── rag/
+│   ├── vectorstore.py      # ChromaDB setup
+│   ├── retriever.py        # RAG retrieval
+│   └── ingest.py           # Load data/qa.json into ChromaDB
+└── data/
+    └── qa.json             # 112 FAQ documents (auto-ingested on first boot)
+```
+
+---
+
+## Cloud Deployment (Railway)
+
+The app is already deployed at:  
+**https://day12-hanquanghieu-2a202600056-production.up.railway.app/**
+
+To redeploy your own instance:
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
+
+# Login and deploy
+railway login
+npx @railway/cli up
+```
+
+Set these environment variables in the Railway dashboard:
+- `OPENAI_API_KEY`
+- `CHAINLIT_AUTH_SECRET` (generate: `python -c "import secrets; print(secrets.token_hex(32))"`)
+- `AUTH_ENABLED=true`
+- `BOT_USERNAME` / `BOT_PASSWORD`
+- `ENVIRONMENT=production`
