@@ -6,6 +6,17 @@
 
 ---
 
+## Submission — Hàn Quang Hiếu (2A202600056)
+
+| Artifact | Link |
+|---|---|
+| **Source code** | [`day12_HanQuangHieu_2A202600056/`](day12_HanQuangHieu_2A202600056/) |
+| **Deployment report** | [`REPORT_HAN_QUANG_HIEU.md`](REPORT_HAN_QUANG_HIEU.md) |
+| **In-folder report** | [`day12_HanQuangHieu_2A202600056/DEPLOYMENT_REPORT_HAN_QUANG_HIEU.md`](day12_HanQuangHieu_2A202600056/DEPLOYMENT_REPORT_HAN_QUANG_HIEU.md) |
+| **Mission answers** | [`MISSION_ANSWERS.md`](MISSION_ANSWERS.md) |
+
+---
+
 ## Cấu Trúc Project
 
 ```
