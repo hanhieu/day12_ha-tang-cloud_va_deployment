@@ -1,0 +1,67 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.egg-info
+.eggs
+dist
+build
+*.egg
+
+# Virtual environments
+.venv
+venv
+env
+.env.local
+
+# Secrets — NEVER bake into Docker image
+.env
+*.env
+
+# Development / test files
+*.test.py
+tests/
+pytest.ini
+.pytest_cache
+coverage.xml
+.coverage
+htmlcov/
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# ChromaDB local data (we rebuild in Docker build; or mount via volume)
+.chromadb/
+
+# Chainlit local session data
+.chainlit/cache/
+.chainlit/translations/
+
+# Crawling scripts (not needed in production)
+crawlFAQ.py
+
+# Day05 / Day06 course materials (not part of the bot)
+Day05-AI-Product-Labs-main/
+Day06-AI-Product-Hackathon-main/
+
+# Large model weights downloaded locally (we download during Docker build)
+*.bin
+*.safetensors
+sentence_transformers_cache/

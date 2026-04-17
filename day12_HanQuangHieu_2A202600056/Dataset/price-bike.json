@@ -1,0 +1,268 @@
+{"priceData": 
+    {"gia_niem_yet": {
+        "columns": "Giá niêm yết|Xanh SM Bike (VNĐ)|Xanh SM Bike Plus (VNĐ)",
+        "rows": [
+            {
+                "city": "Hà Nội",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "13.200",
+                        "value3": "15.700"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": "5.200"
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": "290"
+                    }
+                ]
+            },
+            {
+                "city": "TP. Hồ Chí Minh",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": "15.700"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": "5.200"
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": "290"
+                    }
+                ]
+            },
+            {
+                "city": "Đà Nẵng",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.000",
+                        "value3": "12.800"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.500",
+                        "value3": "4.800"
+                    }
+                ]
+            },
+            {
+                "city": "Bình Dương",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": "14.800"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": "5.100"
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Đồng Nai",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": "14.800"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": "5.100"
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Bà Rịa - Vũng Tàu",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Hội An",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": "12.800"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.500",
+                        "value3": "4.800"
+                    }
+                ]
+            },
+            {
+                "city": "Quảng Ninh",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.000",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.500",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Khánh Hòa",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.000",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.500",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Nghệ An",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "13.500",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "280",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "TP Huế",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "13.500",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "280",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Hải Phòng",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "13.500",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "280",
+                        "value3": null
+                    }
+                ]
+            }
+        ]
+    },
+    "phu_phi": {
+        "columns": "Hạng mục|Điều kiện áp dụng|Phụ phí (VNĐ)",
+        "rows": [
+            {
+                "value_1": "Phụ phí ban đêm",
+                "value_2": "22:00 – 23:59 (Hà Nội)",
+                "value_3": "10.000"
+            },
+            {
+                "value_1": "Phụ phí ban đêm",
+                "value_2": "00:00 – 05:59 (Hà Nội)",
+                "value_3": "20.000"
+            },
+            {
+                "value_1": "Phụ phí ban đêm",
+                "value_2": "22:01 - 05:59 (Tất cả các thành phố)",
+                "value_3": "10.000"
+            },
+            {
+                "value_1": "Phụ phí Lễ tết",
+                "value_2": "Lịch nghỉ lễ của Nhà nước",
+                "value_3": "5.000"
+            },
+            {
+                "value_1": "Phụ phí thay đổi điểm đến tối đa 1 lần",
+                "value_2": "Tất cả",
+                "value_3": "5.000"
+            },
+            {
+                "value_1": "Phụ phí đặt thêm điểm đến thứ 2",
+                "value_2": "Tất cả",
+                "value_3": "5.000"
+            }
+        ]
+    }
+}
+}

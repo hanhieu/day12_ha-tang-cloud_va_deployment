@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Render.com Blueprint for XanhSM Bot
+#
+# Deploy steps:
+#   1. Push repo to GitHub
+#   2. Go to dashboard.render.com → New → Blueprint
+#   3. Point to your GitHub repo — Render reads this file
+#   4. Set OPENAI_API_KEY in the Render dashboard (Environment tab)
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+  - type: web
+    name: xanhsm-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    # Render injects PORT; our CMD already uses $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false          # you set this manually in Render dashboard (never in YAML)
+      - key: OPENAI_MODEL
+        value: gpt-4o
+      - key: OPENAI_MODEL_MINI
+        value: gpt-4o-mini
+      - key: ENVIRONMENT
+        value: production
+      - key: DAILY_BUDGET_USD
+        value: "5.0"
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "20"
+      - key: AUTH_ENABLED
+        value: "false"
+      - key: BOT_USERNAME
+        value: admin
+      - key: BOT_PASSWORD
+        sync: false          # set in Render dashboard
+      - key: CHROMA_PATH
+        value: /app/.chromadb
+      - key: FEEDBACK_PATH
+        value: /app/data/feedback.jsonl
+      - key: APP_NAME
+        value: XanhSM Bot
+      - key: APP_VERSION
+        value: "1.0.0"

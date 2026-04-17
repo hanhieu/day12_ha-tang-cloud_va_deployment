@@ -1,0 +1,3560 @@
+{
+"priceData": {
+            "taxi": {
+            "columns": "Giá dịch vụ|Giá niêm yết (VNĐ)",
+            "rows": [
+                {
+                    "city": "Hà Nội",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "30.500 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.400 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "14.700 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "13.800 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến10.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "11.900 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "TP. Hồ Chí Minh",
+                    "items": [{
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "30.500 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "15.200 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "14.700 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "13.300 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Thừa Thiên Huế",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "30.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "15.200 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "13.800 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "11.500 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Khánh Hòa",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "27.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 21.600 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "17.100 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "17.100 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "11.900 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Đà Nẵng",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "30.500 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.400 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "15.300 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "14.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "13.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Phú Quốc",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "25.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 20.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "15.700 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "15.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "14.500 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Quảng Ninh",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "29.500 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 23.600 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "12.400 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "12.400 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "11.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Hưng Yên",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "28.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 22.400 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "12.500 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "12.500 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "10.600 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Quảng Nam",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "29.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 23.200 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "14.500 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "13.200 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "12.400 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Thái Nguyên",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "27.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 21.600 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "14.200 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "13.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "12.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Vĩnh Phúc",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (0,5 km đầu)",
+                        "value2": "12.000 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "11.000 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Bắc Ninh",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "30.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "13.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "13.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "11.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Thanh Hóa",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (1,5 km đầu)",
+                        "value2": "27.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 21.600 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "14.200 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "13.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "12.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Quảng Bình",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (1 km đầu)",
+                        "value2": "20.000 VNĐ (Giảm/tăng 3.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 30",
+                        "value2": "11.800 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 31 trở đi",
+                        "value2": "11.800 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Bình Dương",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "30.500 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.400 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "15.500 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "15.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "14.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Vũng Tàu",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "30.500 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.400 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "15.200 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "15.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "11.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Đồng Nai",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "30.500 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.400 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "15.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "14.600 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "13.500 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Phú Thọ",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (0,5 km đầu)",
+                        "value2": "12.000 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "11.000 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Hải Dương",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (0,6 km đầu)",
+                        "value2": "15.000 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "12.800 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "11.500 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "10.200 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Nam Định",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (1,3 km đầu)",
+                        "value2": "20.000 VNĐ (Giảm/tăng 3.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "12.800 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "11.500 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "10.700 VNĐ (Giảm/tăng 1.600 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Tây Ninh",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (0,3 km đầu)",
+                        "value2": "5.000 VNĐ (Giảm/tăng 0.800 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 30",
+                        "value2": "12.800 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 31 trở đi",
+                        "value2": "10.700 VNĐ (Giảm/tăng 1.600 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Quảng Ngãi",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "31.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.800 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "14.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "14.000 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "11.900 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Thái Bình",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (1 km đầu)",
+                        "value2": "20.000 VNĐ (Giảm/tăng 3.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 20",
+                        "value2": "11.500 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 21 trở đi",
+                        "value2": "10.200 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Gia Lai",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (0,5 km đầu)",
+                        "value2": "6.000 VNĐ (Giảm thêm tới 1.000 VNĐ hoặc tăng đến 1.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "9.800 VNĐ (Giảm thêm tới 1.500 VNĐ hoặc tăng đến 1.500 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "9.500 VNĐ (Giảm thêm tới 1.400 VNĐ hoặc tăng đến 1.400 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "9.500 VNĐ (Giảm thêm tới 1.400 VNĐ hoặc tăng đến 1.400 VNĐ)"
+                    }
+                ]
+            },
+            {
+                "city": "Ninh Bình",
+                "items": [
+                    {
+                        "value1": "Giá mở cửa (2 km đầu)",
+                        "value2": "30.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 12",
+                        "value2": "13.200 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km tiếp theo đến km 25",
+                        "value2": "13.200 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                    },
+                    {
+                        "value1": "Giá cước từ km 26 trở đi",
+                        "value2": "11.300 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"}
+                    ]
+                },
+                {
+                    "city": "Tiền Giang",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "12.000 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "13.600 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 31 trở đi",
+                            "value2": "9.000 VNĐ (Giảm/tăng 1.400 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Hà Nam",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (1 km đầu)",
+                            "value2": "20.000 VNĐ (Giảm/tăng 3.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "11.900 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "10.700 VNĐ (Giảm/tăng 1.600 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Cần Thơ",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "31.000 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 24.800 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "14.700 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "14.700 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 31 trở đi",
+                            "value2": "13.500 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Long An",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "29.500 VNĐ (Giảm thêm tới 10.000 VNĐ hoặc tăng đến 23.600 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "15.200 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "14.700 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "10.500 VNĐ (Giảm thêm tới 6.000 VNĐ hoặc tăng đến 10.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Lào Cai",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "12.500 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "12.400 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "11.100 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Lạng Sơn",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,4 km đầu)",
+                            "value2": "9.000 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 50",
+                            "value2": "12.000 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 51 trở đi",
+                            "value2": "11.000 VNĐ (Giảm/tăng 1.600 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Phú Yên",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (1 km đầu)",
+                            "value2": "16.000 VNĐ (Giảm thêm tới 1.200 VNĐ hoặc tăng đến 1.200 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "11.000 VNĐ (Giảm thêm tới 1.200 VNĐ hoặc tăng đến 1.200 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "11.000 VNĐ (Giảm thêm tới 1.200 VNĐ hoặc tăng đến 1.200 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "11.000 VNĐ (Giảm thêm tới 1.200 VNĐ hoặc tăng đến 1.200 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Bình Phước",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "12.500 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "12.400 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "10.700 VNĐ (Giảm/tăng 1.600 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Hòa Bình",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,8 km đầu)",
+                            "value2": "15.000 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "10.200 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "9.400 VNĐ (Giảm/tăng 1.400 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "8.500 VNĐ (Giảm/tăng 1.300 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Kon Tum",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "15.000 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "13.600 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 31 trở đi",
+                            "value2": "10.200 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Bến Tre",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "15.000 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 31 trở đi",
+                            "value2": "9.800 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Đồng Tháp",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "12.500 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "15.500 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "11.000 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Yên Bái",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "14.000 VNĐ (Giảm/tăng 2.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "14.000 VNĐ (Giảm/tăng 2.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 31 trở đi",
+                            "value2": "11.000 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Tuyên Quang",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,3 km đầu)",
+                            "value2": "12.000 VNĐ (Giảm/tăng 1.800 VNĐ)"},
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 25",
+                                "value2": "12.500 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km 26 trở đi",
+                                "value2": "12.000 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Quảng Trị",
+                        "items": [
+                            {
+                                "value1": "Giá mở cửa (1 km đầu)",
+                                "value2": "20.000 VNĐ (Giảm/tăng 3.000 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 30",
+                                "value2": "12.400 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km 31 trở đi",
+                                "value2": "9.800 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Trà Vinh",
+                        "items": [
+                            {
+                                "value1": "Giá mở cửa (0,5 km đầu)",
+                                "value2": "10.000 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 30",
+                                "value2": "11.100 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km 31 trở đi",
+                                "value2": "10.200 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Bạc Liêu",
+                        "items": [
+                            {
+                                "value1": "Giá mở cửa (0,3 km đầu)",
+                                "value2": "20.000 VNĐ (Giảm/tăng 3.000 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 25",
+                                "value2": "15.000 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km 26 trở đi",
+                                "value2": "12.000 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Sóc Trăng",
+                        "items": [
+                            {
+                                "value1": "Giá mở cửa (0,5 km đầu)",
+                                "value2": "19.000 VNĐ (Giảm/tăng 2.900 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 30",
+                                "value2": "14.000 VNĐ (Giảm/tăng 2.100 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km 31 trở đi",
+                                "value2": "12.000 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Vĩnh Long",
+                        "items": [
+                            {
+                                "value1": "Giá mở cửa (1 km đầu)",
+                                "value2": "20.000 VNĐ (Giảm/tăng 3.000 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 30",
+                                "value2": "14.500 VNĐ (Giảm/tăng 2.200 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km 31 trở đi",
+                                "value2": "11.500 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Hà Giang",
+                        "items": [
+                            {
+                                "value1": "Giá mở cửa (0,25 km đầu)",
+                                "value2": "10.000 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 12",
+                                "value2": "12.400 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 30",
+                                "value2": "10.700 VNĐ (Giảm/tăng 1.600 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km 31 trở đi",
+                                "value2": "9.400 VNĐ (Giảm/tăng 1.400 VNĐ)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "two_ways": {
+                "columns": "Mô tả|Xanh SM Car|Xanh SM Premium",
+                "rows": [
+                    {
+                        "city": "Hà Nội",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null},
+                                {
+                                    "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                    "value2": "10.000",
+                                    "value3": "10.000",
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                    "value2": "20.000",
+                                    "value3": "20.000",
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                    "value2": "60.000",
+                                    "value3": "60.000",
+                                    "value4": null
+                                }
+                            ]
+                        },
+                        {
+                            "city": "TP. Hồ Chí Minh",
+                            "items": [
+                                {
+                                    "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                    "value2": null,
+                                    "value3": null,
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                    "value2": "10.000",
+                                    "value3": "10.000",
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                    "value2": "10.000",
+                                    "value3": "10.000",
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                    "value2": "20.000",
+                                    "value3": "20.000",
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                    "value2": "60.000",
+                                    "value3": "60.000",
+                                    "value4": null
+                                }
+                            ]
+                        },
+                        {
+                            "city": "Thừa Thiên Huế",
+                            "items": [
+                                {
+                                    "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                    "value2": null,
+                                    "value3": null,
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                    "value2": "10.000",
+                                    "value3": "10.000",
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                    "value2": "10.000",
+                                    "value3": "10.000",
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                    "value2": "20.000",
+                                    "value3": "20.000",
+                                    "value4": null
+                                },
+                                {
+                                    "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                    "value2": "60.000",
+                                    "value3": "60.000",
+                                    "value4": null
+                                }
+                            ]
+                        },
+                        {
+                            "city": "Khánh Hòa",
+                            "items": [
+                                {"value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Đà Nẵng",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Phú Quốc",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Quảng Ninh",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Hưng Yên",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Quảng Nam",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Thái Nguyên",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Vĩnh Phúc",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Bắc Ninh",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Thanh Hóa",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Quảng Bình",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Bình Dương",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Vũng Tàu",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Đồng Nai",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Phú Thọ",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Hải Dương",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Nam Định",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Tây Ninh",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Quảng Ngãi",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Thái Bình",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Gia Lai",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Ninh Bình",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Tiền Giang",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Hà Nam",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Cần Thơ",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Long An",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Lào Cai",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Lạng Sơn",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Phú Yên",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Mức chiết khấu cước quay đầu (%)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Bình Phước",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Hòa Bình",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Kon Tum",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Bến Tre",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Đồng Tháp",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "-",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "-",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "-",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "-",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Yên Bái",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Tuyên Quang",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Quảng Trị",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Trà Vinh",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Bạc Liêu",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Sóc Trăng",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Vĩnh Long",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Hà Giang",
+                        "items": [
+                            {
+                                "value1": "Các phụ phí áp dụng khi đặt xe trên ứng dụng Xanh SM",
+                                "value2": null,
+                                "value3": null,
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thêm điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phí thay đổi điểm đến (VNĐ/điểm)",
+                                "value2": "10.000",
+                                "value3": "10.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "- Phụ phí khung giờ từ 22:00 đến 06:00 (VNĐ/chuyến)",
+                                "value2": "20.000",
+                                "value3": "20.000",
+                                "value4": null
+                            },
+                            {
+                                "value1": "Giá giờ chờ (VNĐ/giờ)",
+                                "value2": "60.000",
+                                "value3": "60.000",
+                                "value4": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bike": {
+        "columns": "Giá niêm yết|Xanh SM Bike (VNĐ)|Xanh SM Bike Plus (VNĐ)",
+        "rows": [
+            {
+                "city": "Hà Nội",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "13.200",
+                        "value3": "15.700"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": "5.200"
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": "290"
+                    }
+                ]
+            },
+            {
+                "city": "TP. Hồ Chí Minh",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": "15.700"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": "5.200"
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": "290"
+                    }
+                ]
+            },
+            {
+                "city": "Đà Nẵng",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.000",
+                        "value3": "12.800"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.500",
+                        "value3": "4.800"
+                    }
+                ]
+            },
+            {
+                "city": "Bình Dương",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": "14.800"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": "5.100"
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Đồng Nai",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": "14.800"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": "5.100"
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Bà Rịa - Vũng Tàu",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Hội An",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.200",
+                        "value3": "12.800"
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.500",
+                        "value3": "4.800"
+                    }
+                ]
+            },
+            {
+                "city": "Quảng Ninh",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.000",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.500",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Khánh Hòa",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "12.000",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.500",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "275",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Nghệ An",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "13.500",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "280",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "TP Huế",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "13.500",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "280",
+                        "value3": null
+                    }
+                ]
+            },
+            {
+                "city": "Hải Phòng",
+                "items": [
+                    {
+                        "value1": "Giá khởi hành (02 km đầu)",
+                        "value2": "13.500",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Giá tiếp theo (từ km tiếp theo)",
+                        "value2": "4.200",
+                        "value3": null
+                    },
+                    {
+                        "value1": "Phí thời gian di chuyển (VNĐ/phút)",
+                        "value2": "280",
+                        "value3": null
+                    }
+                ]
+            }
+        ]
+            },
+            "premium": {
+                "columns": "Giá dịch vụ|Giá niêm yết (VNĐ)",
+                "rows": [
+                    {
+                        "city": "Hà Nội",
+                        "items": [
+                            {
+                                "value1": "Giá mở cửa (2 km đầu)",
+                                "value2": "34.400 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.500 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 12",
+                                "value2": "16.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km tiếp theo đến km 25",
+                                "value2": "14.900 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                            },
+                            {
+                                "value1": "Giá cước từ km 26 trở đi",
+                                "value2": "12.900 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                            }
+                        ]
+                    },
+                    {
+                        "city": "TP. Hồ Chí Minh",
+                        "items": [{
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "34.400 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "16.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "14.400 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Thừa Thiên Huế",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "33.900 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.800 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "15.300 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.800 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Khánh Hòa",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "30.500 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 24.400 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "18.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "18.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.900 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Đà Nẵng",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "34.400 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.800 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "15.400 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "14.300 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Phú Quốc",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "28.500 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 22.800 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.800 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "15.300 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "14.800 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Quảng Ninh",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "33.300 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 26.600 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "13.700 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "13.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Hưng Yên",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "31.600 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 25.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "13.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "13.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "11.400 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Quảng Nam",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "32.700 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 26.200 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.400 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "14.900 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "14.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Thái Nguyên",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "30.500 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 24.400 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "15.200 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "14.700 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "13.100 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Vĩnh Phúc",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "14.500 VNĐ (Giảm/tăng 2.200 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.100 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Bắc Ninh",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "33.900 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "14.200 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "14.200 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.100 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Thanh Hóa",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (1,5 km đầu)",
+                            "value2": "30.500 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 24.400 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "15.200 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "14.700 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "13.100 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Quảng Bình",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (1 km đầu)",
+                            "value2": "22.000 VNĐ (Giảm/tăng 3.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "13.000 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 31 trở đi",
+                            "value2": "13.000 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Bình Dương",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "30.500 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 24.400 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "16.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "14.400 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Vũng Tàu",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "34.400 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "16.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Đồng Nai",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "34.400 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "16.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "14.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Phú Thọ",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km tiếp theo đến km thứ 25",
+                            "value2": "14.500 VNĐ (Giảm/tăng 2.200 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.100 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Hải Dương",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,6 km đầu)",
+                            "value2": "16.500 VNĐ (Giảm/tăng 2.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "14.100 VNĐ (Giảm/tăng 2.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "12.700 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "11.200 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Nam Định",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "33.900 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "14.600 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "14.600 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Tây Ninh",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,3 km đầu)",
+                            "value2": "5.500 VNĐ (Giảm/tăng 0.800 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "14.100 VNĐ (Giảm/tăng 2.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "11.800 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Quảng Ngãi",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "35.000 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 28.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "15.100 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "15.100 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.900 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Thái Bình",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "31.600 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 25.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "13.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "13.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "11.400 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Gia Lai",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "6.500 VNĐ (Giảm thêm tới 1.000 VNĐ hoặc tăng đến 1.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "10.800 VNĐ (Giảm thêm tới 1.600 VNĐ hoặc tăng đến 1.600 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "10.500 VNĐ (Giảm thêm tới 1.600 VNĐ hoặc tăng đến 1.600 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "10.500 VNĐ (Giảm thêm tới 1.600 VNĐ hoặc tăng đến 1.600 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Ninh Bình",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "33.900 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "14.600 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "14.600 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Tiền Giang",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "28.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "15.000 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "9.900 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Hà Nam",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "33.900 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "14.600 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "14.600 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Cần Thơ",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "35.000 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 28.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "16.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "14.400 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Long An",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "33.300 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 26.600 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "16.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "11.300 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Lào Cai",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "13.800 VNĐ (Giảm/tăng 2.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "13.600 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "12.200 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Lạng Sơn",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (1 km đầu)",
+                            "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "12.700 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "11.600 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Phú Yên",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (1 km đầu)",
+                            "value2": "9.000 VNĐ (Giảm thêm tới 1.350 VNĐ hoặc tăng đến 1.350 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "9.000 VNĐ (Giảm thêm tới 1.350 VNĐ hoặc tăng đến 1.350 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "9.000 VNĐ (Giảm thêm tới 1.350 VNĐ hoặc tăng đến 1.350 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "9.000 VNĐ (Giảm thêm tới 1.350 VNĐ hoặc tăng đến 1.350 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Bình Phước",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "34.400 VNĐ (Giảm thêm tới 12.000 VNĐ hoặc tăng đến 27.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "16.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "16.000 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "14.500 VNĐ (Giảm thêm tới 7.000 VNĐ hoặc tăng đến 11.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Hòa Bình",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,8 km đầu)",
+                            "value2": "16.500 VNĐ (Giảm/tăng 2.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "11.200 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "10.300 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "9.400 VNĐ (Giảm/tăng 1.400 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Kon Tum",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "16.500 VNĐ (Giảm/tăng 2.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "15.000 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "11.200 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Bến Tre",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "16.500 VNĐ (Giảm/tăng 2.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "14.500 VNĐ (Giảm/tăng 2.200 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "10.800 VNĐ (Giảm/tăng 1.600 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Đồng Tháp",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (2 km đầu)",
+                            "value2": "28.200 VNĐ (Giảm/tăng 2.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "15.000 VNĐ (Giảm/tăng 2.600 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 31 trở đi",
+                            "value2": "9.900 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Yên Bái",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "15.400 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "15.400 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "12.100 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Tuyên Quang",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,3 km đầu)",
+                            "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "13.800 VNĐ (Giảm/tăng 2.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Quảng Trị",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (1 km đầu)",
+                            "value2": "22.000 VNĐ (Giảm/tăng 3.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "13.600 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "10.800 VNĐ (Giảm/tăng 1.600 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Trà Vinh",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "11.000 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "12.200 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "11.200 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Bạc Liêu",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,3 km đầu)",
+                            "value2": "22.000 VNĐ (Giảm/tăng 3.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 25",
+                            "value2": "16.500 VNĐ (Giảm/tăng 2.500 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km 26 trở đi",
+                            "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Sóc Trăng",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,5 km đầu)",
+                            "value2": "20.900 VNĐ (Giảm/tăng 3.100 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "15.400 VNĐ (Giảm/tăng 2.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "13.200 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Vĩnh Long",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (1 km đầu)",
+                            "value2": "22.000 VNĐ (Giảm/tăng 3.300 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "16.000 VNĐ (Giảm/tăng 2.400 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "12.700 VNĐ (Giảm/tăng 1.900 VNĐ)"
+                        }
+                    ]
+                },
+                {
+                    "city": "Hà Giang",
+                    "items": [
+                        {
+                            "value1": "Giá mở cửa (0,25 km đầu)",
+                            "value2": "11.000 VNĐ (Giảm/tăng 1.700 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 12",
+                            "value2": "13.600 VNĐ (Giảm/tăng 2.000 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá cước từ km tiếp theo đến km 30",
+                            "value2": "11.800 VNĐ (Giảm/tăng 1.800 VNĐ)"
+                        },
+                        {
+                            "value1": "Giá từ km thứ 31 trở đi",
+                            "value2": "10.300 VNĐ (Giảm/tăng 1.500 VNĐ)"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

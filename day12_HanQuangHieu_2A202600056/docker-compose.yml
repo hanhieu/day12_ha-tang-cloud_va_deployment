@@ -1,0 +1,72 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# XanhSM Bot — Local Development / Self-Hosted Deployment
+#
+# Usage:
+#   cp .env.example .env           # fill in your OPENAI_API_KEY
+#   docker-compose up --build
+#
+# Services:
+#   bot    — Chainlit chatbot at http://localhost:8000
+#   redis  — Optional Redis for cross-instance rate limiting (future use)
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: xanhsm-bot:latest
+    container_name: xanhsm-bot
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      # ── Required ──────────────────────────────────────────────────────────
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      # ── Optional overrides ─────────────────────────────────────────────────
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o}
+      - OPENAI_MODEL_MINI=${OPENAI_MODEL_MINI:-gpt-4o-mini}
+      - PORT=8000
+      - HOST=0.0.0.0
+      - ENVIRONMENT=${ENVIRONMENT:-production}
+      - DAILY_BUDGET_USD=${DAILY_BUDGET_USD:-5.0}
+      - RATE_LIMIT_PER_MINUTE=${RATE_LIMIT_PER_MINUTE:-10}
+      - AUTH_ENABLED=${AUTH_ENABLED:-false}
+      - BOT_USERNAME=${BOT_USERNAME:-admin}
+      - BOT_PASSWORD=${BOT_PASSWORD:-changeme}
+      - CHAINLIT_AUTH_SECRET=${CHAINLIT_AUTH_SECRET:-dev-secret-do-not-use-in-production}
+      - REDIS_URL=redis://redis:6379/0
+      - CHROMA_PATH=/app/.chromadb
+      - FEEDBACK_PATH=/app/data/feedback.jsonl
+    volumes:
+      # Persist ChromaDB data across restarts (optional — image already has it baked in)
+      - chroma_data:/app/.chromadb
+      # Persist user feedback across restarts
+      - feedback_data:/app/data
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      start_period: 90s   # allow time for SBERT model load
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    container_name: xanhsm-redis
+    restart: unless-stopped
+    command: redis-server --maxmemory 128mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  chroma_data:
+  feedback_data:

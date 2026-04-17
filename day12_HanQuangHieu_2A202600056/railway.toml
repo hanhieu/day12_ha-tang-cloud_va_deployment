@@ -1,0 +1,27 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Railway Deployment Configuration for XanhSM Bot
+#
+# Deploy steps (do this once):
+#   1. Push repo to GitHub
+#   2. Go to railway.app → New Project → Deploy from GitHub repo
+#   3. Add environment variable: OPENAI_API_KEY = your-key
+#   4. Railway reads this file and deploys automatically
+# ─────────────────────────────────────────────────────────────────────────────
+
+[build]
+# Use the Dockerfile (handles model download + ChromaDB build at build time)
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# Railway injects PORT automatically; Chainlit listens on $PORT
+startCommand = "./start.sh"
+
+# Liveness probe — Railway restarts container if /health fails
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+
+# Give the container time to start (SBERT model takes ~60s to load)
+numReplicas = 1
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3

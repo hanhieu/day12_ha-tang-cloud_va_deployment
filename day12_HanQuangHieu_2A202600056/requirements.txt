@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# XanhSM Bot — Python dependencies
+# Pinned for reproducible production builds.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Web framework / chat UI
+chainlit>=2.0.0,<3.0.0
+
+# LLM client
+openai>=1.30.0,<2.0.0
+
+# Vector store
+chromadb>=0.5.0,<1.0.0
+
+# Environment variable loading
+python-dotenv>=1.0.0,<2.0.0
+
+# Web scraping (used by crawlFAQ.py — not needed at runtime)
+# selenium>=4.0.0
+
+# HTTP (used by Chainlit + OpenAI SDK internals)
+httpx>=0.27.0,<1.0.0
