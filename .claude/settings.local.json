@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python 06-lab-complete/check_production_ready.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python 06-lab-complete/check_production_ready.py)",
+      "Bash(ls *)",
+      "Bash(python -c \"from app.main import app; print\\('Import OK'\\)\")",
+      "Bash(pip install *)",
+      "Bash(AGENT_API_KEY=test-key python -m uvicorn app.main:app --port 8999)",
+      "Bash(curl -s http://localhost:8999/health)",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s http://localhost:8999/ready)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" -X POST http://localhost:8999/ask -H \"Content-Type: application/json\" -d '{\"question\":\"hello\"}')",
+      "Bash(curl -s -X POST http://localhost:8999/ask -H \"X-API-Key: test-key\" -H \"Content-Type: application/json\" -d '{\"question\":\"hello\",\"user_id\":\"hieu\"}')",
+      "Bash(curl -s -X POST http://localhost:8999/ask -H \"X-API-Key: test-key\" -H \"Content-Type: application/json\" -d '{\"question\":\"my name is Alice\",\"user_id\":\"hieu\"}')",
+      "Bash(python -m json.tool kill %1)",
+      "Bash(curl -s -X POST http://localhost:8999/ask -H \"Content-Type: application/json\" -d '{\"question\":\"hello\"}')",
+      "Bash(curl -s http://localhost:8999/metrics -H \"X-API-Key: test-key\")"
+    ]
+  }
+}
