@@ -34,8 +34,8 @@ from app.auth import verify_api_key
 from app.rate_limiter import check_rate_limit
 from app.cost_guard import check_and_record_cost, get_daily_usage
 
-# Mock LLM (replace with OpenAI/Anthropic when API key is set)
-from utils.mock_llm import ask as llm_ask
+def llm_ask(question: str) -> str:
+    raise NotImplementedError("Set ANTHROPIC_API_KEY or OPENAI_API_KEY and implement a real LLM call.")
 
 # ─────────────────────────────────────────────────────────
 # Logging — JSON structured
