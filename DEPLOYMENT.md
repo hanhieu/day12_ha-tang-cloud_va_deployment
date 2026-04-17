@@ -9,10 +9,10 @@
 ## Public URL
 
 ```
-https://ai-agent-hieu.up.railway.app
+https://day12-hanquanghieu-2a202600056-production.up.railway.app
 ```
 
-> **Note:** URL trên là placeholder. Sau khi chạy `railway up` thực tế, thay bằng URL Railway cấp.
+> **Note:** Đây là URL thực tế đã deploy thành công trên Railway (17/04/2026).
 
 ---
 
@@ -28,7 +28,7 @@ https://ai-agent-hieu.up.railway.app
 ### Health Check
 
 ```bash
-curl https://ai-agent-hieu.up.railway.app/health
+curl https://day12-hanquanghieu-2a202600056-production.up.railway.app/health
 # Expected response:
 # {
 #   "status": "ok",
@@ -44,7 +44,7 @@ curl https://ai-agent-hieu.up.railway.app/health
 ### Readiness Check
 
 ```bash
-curl https://ai-agent-hieu.up.railway.app/ready
+curl https://day12-hanquanghieu-2a202600056-production.up.railway.app/ready
 # Expected response:
 # {"ready": true}
 ```
@@ -52,7 +52,7 @@ curl https://ai-agent-hieu.up.railway.app/ready
 ### API Test — No Auth (should return 401)
 
 ```bash
-curl -X POST https://ai-agent-hieu.up.railway.app/ask \
+curl -X POST https://day12-hanquanghieu-2a202600056-production.up.railway.app/ask \
   -H "Content-Type: application/json" \
   -d '{"question": "Hello"}'
 # Expected response (401):
@@ -62,7 +62,7 @@ curl -X POST https://ai-agent-hieu.up.railway.app/ask \
 ### API Test — With Authentication
 
 ```bash
-curl -X POST https://ai-agent-hieu.up.railway.app/ask \
+curl -X POST https://day12-hanquanghieu-2a202600056-production.up.railway.app/ask \
   -H "X-API-Key: YOUR_AGENT_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"user_id": "hieu", "question": "What is cloud deployment?"}'
@@ -81,7 +81,7 @@ curl -X POST https://ai-agent-hieu.up.railway.app/ask \
 for i in {1..22}; do
   STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
     -H "X-API-Key: YOUR_AGENT_API_KEY" \
-    -X POST https://ai-agent-hieu.up.railway.app/ask \
+    -X POST https://day12-hanquanghieu-2a202600056-production.up.railway.app/ask \
     -H "Content-Type: application/json" \
     -d "{\"question\": \"Test $i\"}")
   echo "Request $i: HTTP $STATUS"
@@ -92,7 +92,7 @@ done
 ### Metrics (requires auth)
 
 ```bash
-curl https://ai-agent-hieu.up.railway.app/metrics \
+curl https://day12-hanquanghieu-2a202600056-production.up.railway.app/metrics \
   -H "X-API-Key: YOUR_AGENT_API_KEY"
 # Expected response:
 # {

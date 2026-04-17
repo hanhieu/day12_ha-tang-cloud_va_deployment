@@ -159,17 +159,15 @@ railway domain
 **Kết quả test (sau khi deploy):**
 ```bash
 # Health check
-curl https://ai-agent-hieu.railway.app/health
-# Response: {"status":"ok","uptime_seconds":142.3,"platform":"Railway","timestamp":"2026-04-17T..."}
+curl https://day12-hanquanghieu-2a202600056-production.up.railway.app/health
+# Response: {"status":"ok","uptime_seconds":142.3,"environment":"production","timestamp":"2026-04-17T..."}
 
-# Agent endpoint
-curl -X POST https://ai-agent-hieu.railway.app/ask \
-  -H "Content-Type: application/json" \
-  -d '{"question": "What is Docker?"}'
-# Response: {"question":"What is Docker?","answer":"Container là cách đóng gói app...","platform":"Railway"}
+# Readiness check
+curl https://day12-hanquanghieu-2a202600056-production.up.railway.app/ready
+# Response: {"ready":true}
 ```
 
-**URL:** `https://ai-agent-hieu.up.railway.app` *(URL mẫu — thực tế thay bằng URL Railway cấp)*
+**URL:** `https://day12-hanquanghieu-2a202600056-production.up.railway.app` *(deployed 17/04/2026)*
 
 ### Exercise 3.2: So sánh `render.yaml` vs `railway.toml`
 
