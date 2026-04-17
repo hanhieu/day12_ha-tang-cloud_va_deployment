@@ -578,68 +578,81 @@ Total messages: 10
 
 ---
 
-## Part 6: Final Project — Production-Ready Agent
+## Part 6: Final Project — XanhSM Bot (Production Chainlit Agent)
 
 ### Architecture
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│                        Client                         │
+│               Browser / End-user                      │
 └────────────────────────┬─────────────────────────────┘
-                         │ HTTPS
+                         │ HTTPS (Railway domain)
                          ▼
 ┌──────────────────────────────────────────────────────┐
-│                   Nginx (LB / Proxy)                  │
-│              Port 80 → agent:8000                     │
-└────────────────────────┬─────────────────────────────┘
-                         │ Internal network
-              ┌──────────┼──────────┐
-              ▼          ▼          ▼
-        ┌──────────┐ ┌──────────┐ ┌──────────┐
-        │ Agent 1  │ │ Agent 2  │ │ Agent 3  │
-        │ FastAPI  │ │ FastAPI  │ │ FastAPI  │
-        │ + Auth   │ │ + Auth   │ │ + Auth   │
-        │ + RL     │ │ + RL     │ │ + RL     │
-        └────┬─────┘ └────┬─────┘ └────┬─────┘
-             └────────────┼────────────┘
-                          │
-                   ┌──────▼──────┐
-                   │    Redis    │
-                   │ Sessions +  │
-                   │ Rate Limits │
-                   └─────────────┘
+│           XanhSM Bot — Chainlit + FastAPI              │
+│        (day12_HanQuangHieu_2A202600056/app.py)        │
+│                                                        │
+│  Middleware:                                           │
+│  ┌────────────────────────────────────────────────┐   │
+│  │ CORSMiddleware                                  │   │
+│  │ HTTP middleware — security headers + JSON log   │   │
+│  └────────────────────────────────────────────────┘   │
+│                                                        │
+│  Operations endpoints:                                 │
+│  GET  /health  → liveness probe (Railway)              │
+│                                                        │
+│  Chainlit UI (all other routes):                       │
+│  /   → chat interface                                  │
+│                                                        │
+│  Per-message middleware chain:                         │
+│  Rate Limiter → Cost Guard → Router                    │
+│       ↓               ↓          ↓                     │
+│  10 msg/min      $5/day      Intent Detector           │
+│                             → FAQ (RAG/ChromaDB)       │
+│                             → Fare Calculator          │
+│                             → Driver Registration      │
+└──────────────────────────────────────────────────────┘
+                         │
+              ┌──────────┴───────────┐
+              ▼                      ▼
+   ┌─────────────────┐    ┌──────────────────┐
+   │  OpenAI API     │    │  ChromaDB        │
+   │  gpt-4o-mini    │    │  Vietnamese SBERT│
+   │  (real LLM)     │    │  vector store    │
+   └─────────────────┘    └──────────────────┘
 ```
 
 ### Tất cả Requirements đã implement
 
 | Requirement | File | Status |
 |-------------|------|--------|
-| REST API answer questions | `app/main.py` | ✅ `/ask` endpoint |
-| Config từ env vars | `app/config.py` | ✅ 12-factor compliant |
-| API key authentication | `app/main.py` | ✅ `verify_api_key()` |
-| Rate limiting 10 req/min | `app/main.py` | ✅ `check_rate_limit()` sliding window |
-| Cost guard | `app/main.py` | ✅ `check_and_record_cost()` |
-| Health check | `app/main.py` | ✅ `GET /health` |
-| Readiness check | `app/main.py` | ✅ `GET /ready` |
-| Graceful shutdown | `app/main.py` | ✅ SIGTERM handler + lifespan |
-| Structured JSON logging | `app/main.py` | ✅ `json.dumps(...)` |
+| Chat UI (Chainlit) | `app.py` | ✅ Giao diện chat XanhSM |
+| Config từ env vars | `config.py` | ✅ 12-factor compliant |
+| Password authentication | `app.py` + `config.py` | ✅ `@cl.password_auth_callback` (bật qua `AUTH_ENABLED=true`) |
+| Rate limiting 10 msg/min | `bot/middleware/rate_limiter.py` | ✅ Sliding window per session |
+| Cost guard | `bot/middleware/cost_guard.py` | ✅ Daily budget `$5 USD` |
+| Health check | `app.py` | ✅ `GET /health` → `{"status":"ok"}` |
+| Graceful shutdown | `app.py` | ✅ SIGTERM handler |
+| Structured JSON logging | `app.py` | ✅ Custom `_JsonFormatter` |
 | Multi-stage Dockerfile | `Dockerfile` | ✅ builder + runtime stages |
-| Docker Compose | `docker-compose.yml` | ✅ agent + redis |
-| Non-root user | `Dockerfile` | ✅ `USER agent` |
+| Docker Compose | `docker-compose.yml` | ✅ bot service |
+| Non-root user | `Dockerfile` | ✅ `USER appuser` |
 | Health check in Docker | `Dockerfile` | ✅ `HEALTHCHECK` instruction |
 | .dockerignore | `.dockerignore` | ✅ |
 | Railway config | `railway.toml` | ✅ |
 | Render config | `render.yaml` | ✅ |
 | No hardcoded secrets | all files | ✅ |
+| RAG (FAQ retrieval) | `rag/` | ✅ ChromaDB + Vietnamese SBERT |
+| Intent detection | `bot/tools/intent_detector.py` | ✅ |
 
 ### Grading Self-Assessment
 
 | Criteria | Points | My Score | Notes |
 |----------|--------|----------|-------|
-| **Functionality** | 20 | 20 | Agent hoạt động, /ask, /health, /ready |
+| **Functionality** | 20 | 20 | Chat UI, FAQ RAG, fare calculator, driver registration |
 | **Docker** | 15 | 15 | Multi-stage, slim base, non-root, HEALTHCHECK |
-| **Security** | 20 | 18 | API key auth, rate limit, cost guard (no Redis rate limit) |
-| **Reliability** | 20 | 20 | Health checks, graceful shutdown, lifespan |
+| **Security** | 20 | 18 | Password auth, rate limit, cost guard (rate limit in-memory, không Redis) |
+| **Reliability** | 20 | 20 | Health check, graceful shutdown, SIGTERM handler |
 | **Scalability** | 15 | 12 | Stateless config, Redis URL defined (no full Redis implementation) |
-| **Deployment** | 10 | 8 | Railway/Render config ready, documented |
+| **Deployment** | 10 | 8 | Railway/Render config ready, documented, URL live |
 | **Total** | 100 | 93 | |

@@ -1,7 +1,7 @@
 # Deployment Information
 
 **Student:** Hàn Quang Hiếu — Mã học viên: 2A202600056  
-**Project:** Day 12 — Production AI Agent  
+**Project:** Day 12 — XanhSM Bot (Chainlit AI Customer Service)  
 **Date:** 17/04/2026
 
 ---
@@ -12,7 +12,8 @@
 https://day12-hanquanghieu-2a202600056-production.up.railway.app
 ```
 
-> **Note:** Đây là URL thực tế đã deploy thành công trên Railway (17/04/2026).
+> **Note:** Đây là URL thực tế đã deploy thành công trên Railway (17/04/2026).  
+> Mở URL trên trình duyệt → giao diện chat Chainlit của XanhSM Bot.
 
 ---
 
@@ -23,104 +24,58 @@ https://day12-hanquanghieu-2a202600056-production.up.railway.app
 
 ---
 
-## Test Commands
+## What's deployed
+
+XanhSM Bot là một Chainlit chat bot hỗ trợ khách hàng dịch vụ xe máy chia sẻ XanhSM. Bot được deploy tại Railway, expose web UI chat tại URL trên.
+
+**Endpoints hoạt động:**
+
+| Endpoint | Method | Auth | Mô tả |
+|----------|--------|------|-------|
+| `/` | GET | ❌ | Giao diện chat Chainlit |
+| `/health` | GET | ❌ | Liveness probe (Railway dùng endpoint này để restart container nếu fail) |
 
 ### Health Check
 
 ```bash
 curl https://day12-hanquanghieu-2a202600056-production.up.railway.app/health
-# Expected response:
-# {
-#   "status": "ok",
-#   "version": "1.0.0",
-#   "environment": "production",
-#   "uptime_seconds": 142.3,
-#   "total_requests": 5,
-#   "checks": {"llm": "mock"},
-#   "timestamp": "2026-04-17T10:00:00+00:00"
-# }
+# Response:
+# {"status":"ok"}
 ```
 
-### Readiness Check
+### Access the bot
 
-```bash
-curl https://day12-hanquanghieu-2a202600056-production.up.railway.app/ready
-# Expected response:
-# {"ready": true}
+Mở trình duyệt tại:
+```
+https://day12-hanquanghieu-2a202600056-production.up.railway.app
 ```
 
-### API Test — No Auth (should return 401)
+Giao diện chat Chainlit hiện ra. Nhắn tin để bắt đầu (hỏi về giá, đăng ký tài xế...).
 
-```bash
-curl -X POST https://day12-hanquanghieu-2a202600056-production.up.railway.app/ask \
-  -H "Content-Type: application/json" \
-  -d '{"question": "Hello"}'
-# Expected response (401):
-# {"detail": "Invalid or missing API key. Include header: X-API-Key: <key>"}
-```
-
-### API Test — With Authentication
-
-```bash
-curl -X POST https://day12-hanquanghieu-2a202600056-production.up.railway.app/ask \
-  -H "X-API-Key: YOUR_AGENT_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"user_id": "hieu", "question": "What is cloud deployment?"}'
-# Expected response (200):
-# {
-#   "question": "What is cloud deployment?",
-#   "answer": "Deployment là quá trình đưa code từ máy bạn lên server...",
-#   "model": "gpt-4o-mini",
-#   "timestamp": "2026-04-17T10:00:00+00:00"
-# }
-```
-
-### Rate Limiting Test (expect 429 after 20 requests)
-
-```bash
-for i in {1..22}; do
-  STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-    -H "X-API-Key: YOUR_AGENT_API_KEY" \
-    -X POST https://day12-hanquanghieu-2a202600056-production.up.railway.app/ask \
-    -H "Content-Type: application/json" \
-    -d "{\"question\": \"Test $i\"}")
-  echo "Request $i: HTTP $STATUS"
-done
-# Expected: HTTP 200 for requests 1-20, HTTP 429 for 21+
-```
-
-### Metrics (requires auth)
-
-```bash
-curl https://day12-hanquanghieu-2a202600056-production.up.railway.app/metrics \
-  -H "X-API-Key: YOUR_AGENT_API_KEY"
-# Expected response:
-# {
-#   "uptime_seconds": 300.5,
-#   "total_requests": 25,
-#   "error_count": 0,
-#   "daily_cost_usd": 0.0002,
-#   "daily_budget_usd": 5.0,
-#   "budget_used_pct": 0.0
-# }
-```
+> **Auth:** Mặc định `AUTH_ENABLED=false` trong production → không cần đăng nhập.  
+> Để bật auth, set `AUTH_ENABLED=true` + `BOT_USERNAME` + `BOT_PASSWORD` + `CHAINLIT_AUTH_SECRET`.
 
 ---
 
-## Environment Variables Set
+## Environment Variables
 
 | Variable | Value | Description |
 |----------|-------|-------------|
-| `PORT` | `8000` | Server port (Railway injects automatically) |
+| `PORT` | Railway inject tự động | Server port |
 | `ENVIRONMENT` | `production` | Runtime environment |
-| `APP_NAME` | `Production AI Agent` | App display name |
+| `APP_NAME` | `XanhSM Bot` | App display name |
 | `APP_VERSION` | `1.0.0` | Version string |
-| `AGENT_API_KEY` | `<secret>` | API key for authentication |
-| `JWT_SECRET` | `<secret>` | JWT signing secret |
-| `RATE_LIMIT_PER_MINUTE` | `20` | Max requests per minute per key |
-| `DAILY_BUDGET_USD` | `5.0` | Max daily LLM cost |
-| `LOG_LEVEL` | `INFO` | Logging verbosity |
-| `OPENAI_API_KEY` | `<optional>` | Real LLM (mock if not set) |
+| `OPENAI_API_KEY` | `<secret>` | OpenAI API key (bắt buộc) |
+| `OPENAI_MODEL` | `gpt-4o` | Model chính cho intent/complex queries |
+| `OPENAI_MODEL_MINI` | `gpt-4o-mini` | Model nhẹ cho FAQ retrieval |
+| `AUTH_ENABLED` | `false` | Bật/tắt Chainlit password auth |
+| `BOT_USERNAME` | `admin` | Username (khi AUTH_ENABLED=true) |
+| `BOT_PASSWORD` | `<secret>` | Password (khi AUTH_ENABLED=true) |
+| `CHAINLIT_AUTH_SECRET` | `<secret>` | JWT secret cho Chainlit session (khi auth bật) |
+| `RATE_LIMIT_PER_MINUTE` | `10` | Max tin nhắn / user / phút |
+| `DAILY_BUDGET_USD` | `5.0` | Max OpenAI spend / ngày (USD) |
+| `CHROMA_PATH` | `/app/.chromadb` | Đường dẫn ChromaDB vector store |
+| `COLLECTION_NAME` | `xanhsm_qa` | Tên collection ChromaDB |
 
 ---
 
@@ -136,17 +91,20 @@ npm i -g @railway/cli
 railway login
 
 # 3. Go to project folder
-cd 06-lab-complete
+cd day12_HanQuangHieu_2A202600056
 
 # 4. Initialize Railway project
 railway init
 
 # 5. Set required secrets
-railway variables set AGENT_API_KEY=$(openssl rand -hex 32)
-railway variables set JWT_SECRET=$(openssl rand -hex 32)
+railway variables set OPENAI_API_KEY=sk-your-key-here
 railway variables set ENVIRONMENT=production
-railway variables set RATE_LIMIT_PER_MINUTE=20
-railway variables set DAILY_BUDGET_USD=5.0
+
+# (Optional) Enable login gate
+railway variables set AUTH_ENABLED=true
+railway variables set BOT_USERNAME=admin
+railway variables set BOT_PASSWORD=$(openssl rand -hex 16)
+railway variables set CHAINLIT_AUTH_SECRET=$(openssl rand -hex 32)
 
 # 6. Deploy
 railway up
@@ -158,46 +116,45 @@ railway domain
 railway logs
 ```
 
+> Railway đọc `railway.toml` → build từ `Dockerfile` → chạy `start.sh` → Chainlit lắng nghe trên `$PORT`.
+
 ### Render (alternative)
 
 ```bash
 # 1. Push code to GitHub
 git add .
-git commit -m "Day 12: Production AI Agent"
+git commit -m "Day 12: XanhSM Bot"
 git push origin main
 
-# 2. Go to render.com → Sign up/Login
-# 3. New → Blueprint
-# 4. Connect GitHub repo
-# 5. Render auto-reads render.yaml
-# 6. Set secrets in dashboard:
-#    - AGENT_API_KEY (click "Generate")
-#    - JWT_SECRET (click "Generate")
-# 7. Deploy!
+# 2. Go to render.com → New → Blueprint
+# 3. Connect GitHub repo (point to day12_HanQuangHieu_2A202600056)
+# 4. Render auto-reads render.yaml
+# 5. Set secrets in dashboard:
+#    - OPENAI_API_KEY
+# 6. Deploy!
 ```
 
 ---
 
-## Local Testing
+## Local Development
 
 ```bash
-# 1. Setup
-cd 06-lab-complete
-cp .env.example .env.local
-# Edit .env.local: set AGENT_API_KEY=test-key-123
+# 1. Go to project folder
+cd day12_HanQuangHieu_2A202600056
 
-# 2. Run with Docker Compose
+# 2. Copy env template
+cp .env.example .env
+# Edit .env: đặt OPENAI_API_KEY=sk-your-key
+
+# 3. Run with Docker Compose
 docker compose up
 
-# 3. Test
-curl http://localhost:8000/health
-curl -H "X-API-Key: test-key-123" \
-     -X POST http://localhost:8000/ask \
-     -H "Content-Type: application/json" \
-     -d '{"question": "What is deployment?"}'
+# 4. Open browser
+# http://localhost:8000
 
-# 4. Run production readiness checker
-python check_production_ready.py
+# 5. Test health check
+curl http://localhost:8000/health
+# {"status":"ok"}
 ```
 
 ---
@@ -206,40 +163,41 @@ python check_production_ready.py
 
 ```
 =======================================================
-  Production Readiness Check — Day 12 Lab
+  XanhSM Bot — Production Readiness Checklist
 =======================================================
 
 📁 Required Files
-  ✅ Dockerfile exists
-  ✅ docker-compose.yml exists
-  ✅ .dockerignore exists
-  ✅ .env.example exists
-  ✅ requirements.txt exists
-  ✅ railway.toml or render.yaml exists
+  ✅ Dockerfile (multi-stage build)
+  ✅ docker-compose.yml
+  ✅ .dockerignore
+  ✅ .env.example
+  ✅ requirements.txt
+  ✅ railway.toml
+  ✅ render.yaml
 
 🔒 Security
   ✅ .env in .gitignore
   ✅ No hardcoded secrets in code
+  ✅ Non-root user (appuser) in Docker
+  ✅ Security headers middleware (X-Content-Type-Options, X-Frame-Options)
+  ✅ CORS middleware
 
-🌐 API Endpoints (code check)
-  ✅ /health endpoint defined
-  ✅ /ready endpoint defined
-  ✅ Authentication implemented
-  ✅ Rate limiting implemented
-  ✅ Graceful shutdown (SIGTERM)
-  ✅ Structured logging (JSON)
+🌐 Operations
+  ✅ /health endpoint (liveness probe — Railway dùng để restart nếu fail)
+  ✅ Graceful shutdown (SIGTERM handler)
+  ✅ Structured JSON logging
+
+🛡️ Rate Limiting & Cost Control
+  ✅ Sliding-window rate limiter (10 tin nhắn/user/phút)
+  ✅ Daily budget guard ($5 USD/ngày mặc định)
 
 🐳 Docker
-  ✅ Multi-stage build
+  ✅ Multi-stage build (builder + runtime)
   ✅ Non-root user
   ✅ HEALTHCHECK instruction
-  ✅ Slim base image
-  ✅ .dockerignore covers .env
-  ✅ .dockerignore covers __pycache__
+  ✅ Slim base image (python:3.11-slim)
+  ✅ .dockerignore covers .env, __pycache__
 
-=======================================================
-  Result: 18/18 checks passed (100%)
-  🎉 PRODUCTION READY! Deploy nào!
 =======================================================
 ```
 
@@ -247,10 +205,7 @@ python check_production_ready.py
 
 ## Screenshots
 
-> Screenshots được lưu trong `screenshots/` folder sau khi deploy thực tế.
+> Screenshots được lưu trong `day12_HanQuangHieu_2A202600056/screenshots/` sau khi deploy.
 
-- `screenshots/railway-dashboard.png` — Railway deployment dashboard
-- `screenshots/service-running.png` — Service running confirmation
-- `screenshots/health-check.png` — curl /health response
-- `screenshots/api-test.png` — curl /ask response
-- `screenshots/rate-limit.png` — 429 response after limit exceeded
+- `screenshots/Log in screen.png` — Màn hình đăng nhập (khi AUTH_ENABLED=true)
+- `screenshots/Main chat screen.png` — Giao diện chat chính của XanhSM Bot

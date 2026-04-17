@@ -40,13 +40,11 @@ Part 6: Kết hợp tất cả → Production-ready agent
 ```
 
 **Công nghệ sử dụng:**
-- Python 3.11 + FastAPI + Uvicorn
+- Python 3.11 + Chainlit + FastAPI (Chainlit dùng FastAPI nội bộ)
+- OpenAI API — `gpt-4o` / `gpt-4o-mini` (LLM thật)
+- ChromaDB + Vietnamese SBERT (vector store cho RAG)
 - Docker + Docker Compose
-- Nginx (load balancer)
-- Redis (session store + rate limiting)
 - Railway / Render (cloud platforms)
-- JWT (JSON Web Token)
-- Mock LLM (không cần API key thật)
 
 ---
 
@@ -762,317 +760,212 @@ server {
 
 ---
 
-## 7. Part 6 — Final Project (Lab 06 Complete)
+## 7. Part 6 — Final Project (XanhSM Bot)
 
 ### 7.1 Kiến Trúc Tổng Thể
 
 ```
 ┌────────────────────────────────────────────────────────────┐
-│                         CLIENT                              │
-│   curl / Postman / Web App                                  │
+│                         BROWSER                             │
+│   Người dùng / Giáo viên chấm điểm                         │
 └───────────────────────┬────────────────────────────────────┘
-                        │ HTTPS (Railway/Render domain)
-                        │ X-API-Key: <key>
+                        │ HTTPS (Railway domain)
                         ▼
 ┌────────────────────────────────────────────────────────────┐
-│                    FastAPI Application                      │
-│                  (06-lab-complete/app/)                     │
+│              XanhSM Bot — Chainlit Application              │
+│          (day12_HanQuangHieu_2A202600056/app.py)            │
 │                                                             │
-│  Middleware Stack:                                          │
+│  Middleware (trên Chainlit's FastAPI server):               │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │ 1. CORS Middleware (allowed origins)                 │   │
-│  │ 2. Request Logging Middleware (JSON structured)      │   │
-│  │ 3. Security Headers Middleware (X-Frame-Options...) │   │
+│  │ 1. CORSMiddleware                                    │   │
+│  │ 2. HTTP middleware — security headers + JSON logging │   │
 │  └─────────────────────────────────────────────────────┘   │
 │                                                             │
-│  Endpoints:                                                 │
+│  Operations:                                                │
 │  ┌──────────────────────────────────────────────────┐      │
-│  │  GET  /          → Info (public)                 │      │
-│  │  GET  /health    → Liveness probe (public)       │      │
-│  │  GET  /ready     → Readiness probe (public)      │      │
-│  │  POST /ask       → AI Agent (requires auth)      │      │
-│  │  GET  /metrics   → Metrics (requires auth)       │      │
+│  │  GET /health  → {"status":"ok"}  (Railway probe)  │      │
 │  └──────────────────────────────────────────────────┘      │
 │                                                             │
-│  Security Chain (for /ask):                                 │
-│  API Key Auth → Rate Limiter → Cost Guard → LLM             │
+│  Chainlit UI (tất cả các routes khác):                     │
+│  /   → Giao diện chat XanhSM                               │
+│                                                             │
+│  Per-message middleware chain:                              │
+│  Rate Limiter (10/min) → Cost Guard ($5/day) → Router      │
+│                                                             │
+│  Bot Handlers:                                              │
+│  ┌──────────────────────────────────────────────────┐      │
+│  │ Intent Detector → FAQ (RAG) / Giá xe / Đăng ký tài│     │
+│  └──────────────────────────────────────────────────┘      │
 └───────────────────────┬────────────────────────────────────┘
                         │
               ┌─────────┴──────────┐
               ▼                    ▼
-      ┌──────────────┐     ┌──────────────┐
-      │  Mock LLM    │     │    Redis      │
-      │  (or OpenAI  │     │  (sessions,   │
-      │   if key set)│     │   rate limits)│
-      └──────────────┘     └──────────────┘
+   ┌─────────────────┐   ┌──────────────────────┐
+   │  OpenAI API     │   │  ChromaDB            │
+   │  gpt-4o-mini    │   │  Vietnamese SBERT    │
+   │  (real LLM)     │   │  (FAQ retrieval RAG) │
+   └─────────────────┘   └──────────────────────┘
 ```
 
 ### 7.2 Giải Thích Từng File
 
-#### `app/config.py` — Centralized Configuration
+#### `config.py` — Centralized Configuration
 
 ```python
-@dataclass
 class Settings:
-    host: str = field(default_factory=lambda: os.getenv("HOST", "0.0.0.0"))
-    port: int = field(default_factory=lambda: int(os.getenv("PORT", "8000")))
-    environment: str = field(default_factory=lambda: os.getenv("ENVIRONMENT", "development"))
-    debug: bool = field(default_factory=lambda: os.getenv("DEBUG", "false").lower() == "true")
-    app_name: str = field(default_factory=lambda: os.getenv("APP_NAME", "Production AI Agent"))
-    agent_api_key: str = field(default_factory=lambda: os.getenv("AGENT_API_KEY", "dev-key-change-me"))
-    rate_limit_per_minute: int = field(default_factory=lambda: int(os.getenv("RATE_LIMIT_PER_MINUTE", "20")))
-    daily_budget_usd: float = field(default_factory=lambda: float(os.getenv("DAILY_BUDGET_USD", "5.0")))
-    redis_url: str = field(default_factory=lambda: os.getenv("REDIS_URL", ""))
+    openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
+    openai_model: str = os.getenv("OPENAI_MODEL", "gpt-4o")
+    openai_model_mini: str = os.getenv("OPENAI_MODEL_MINI", "gpt-4o-mini")
+    port: int = int(os.getenv("PORT", "8000"))
+    host: str = os.getenv("HOST", "0.0.0.0")
+    environment: str = os.getenv("ENVIRONMENT", "development")
+    debug: bool = os.getenv("DEBUG", "false").lower() == "true"
+    auth_enabled: bool = os.getenv("AUTH_ENABLED", "false").lower() == "true"
+    bot_username: str = os.getenv("BOT_USERNAME", "admin")
+    bot_password: str = os.getenv("BOT_PASSWORD", "changeme")
+    rate_limit_per_minute: int = int(os.getenv("RATE_LIMIT_PER_MINUTE", "10"))
+    daily_budget_usd: float = float(os.getenv("DAILY_BUDGET_USD", "5.0"))
+    chroma_path: str = os.getenv("CHROMA_PATH", ".chromadb")
+    collection_name: str = os.getenv("COLLECTION_NAME", "xanhsm_qa")
+    app_name: str = os.getenv("APP_NAME", "XanhSM Bot")
+    app_version: str = os.getenv("APP_VERSION", "1.0.0")
 
-    def validate(self):
-        if self.environment == "production":
-            if self.agent_api_key == "dev-key-change-me":
-                raise ValueError("AGENT_API_KEY must be set in production!")
-        return self
-
-settings = Settings().validate()  # Singleton, import từ mọi module
+settings = Settings()
 ```
 
-**Fail fast:** `validate()` raise exception ngay khi start nếu thiếu config quan trọng. Tốt hơn là fail sau khi nhận request thật.
+**12-factor compliant:** Tất cả config đọc từ environment variables. Không hardcode secret.
 
-#### `app/main.py` — Entry Point
-
-Kết hợp tất cả:
+#### `app.py` — Entry Point
 
 ```python
-# 1. Logging setup
-logging.basicConfig(
-    level=logging.DEBUG if settings.debug else logging.INFO,
-    format='{"ts":"%(asctime)s","lvl":"%(levelname)s","msg":"%(message)s"}',
-)
+# 1. Structured JSON logging (custom formatter)
+class _JsonFormatter(logging.Formatter):
+    def format(self, record):
+        return json.dumps({"ts": ..., "lvl": record.levelname, "msg": record.getMessage()})
 
-# 2. Rate limiter (in-memory Sliding Window)
-_rate_windows: dict[str, deque] = defaultdict(deque)
+# 2. Security headers + request logging trên Chainlit's FastAPI server
+@_server.middleware("http")
+async def _http_middleware(request, call_next):
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "SAMEORIGIN"
+    ...
 
-def check_rate_limit(key: str):
-    now = time.time()
-    window = _rate_windows[key]
-    while window and window[0] < now - 60:
-        window.popleft()
-    if len(window) >= settings.rate_limit_per_minute:
-        raise HTTPException(429, f"Rate limit exceeded: {settings.rate_limit_per_minute} req/min")
-    window.append(now)
+# 3. Health probe
+@_server.get("/health")
+def health():
+    return {"status": "ok", "version": ..., "uptime_seconds": ..., ...}
 
-# 3. Cost guard (daily budget)
-_daily_cost = 0.0
+# 4. SIGTERM handler
+signal.signal(signal.SIGTERM, _handle_sigterm)
 
-def check_and_record_cost(input_tokens, output_tokens):
-    global _daily_cost
-    if _daily_cost >= settings.daily_budget_usd:
-        raise HTTPException(503, "Daily budget exhausted")
-    cost = (input_tokens / 1000) * 0.00015 + (output_tokens / 1000) * 0.0006
-    _daily_cost += cost
+# 5. Password auth (optional, controlled by AUTH_ENABLED env var)
+if settings.auth_enabled:
+    @cl.password_auth_callback
+    def auth_callback(username, password):
+        ...
 
-# 4. API Key auth
-def verify_api_key(api_key: str = Security(api_key_header)) -> str:
-    if not api_key or api_key != settings.agent_api_key:
-        raise HTTPException(401, "Invalid or missing API key")
-    return api_key
-
-# 5. Lifespan (startup + graceful shutdown)
-@asynccontextmanager
-async def lifespan(app):
-    global _is_ready
-    _is_ready = True
-    yield
-    _is_ready = False
-
-# 6. App with middleware
-app = FastAPI(...)
-app.add_middleware(CORSMiddleware, ...)
-
-@app.middleware("http")
-async def request_middleware(request, call_next):
-    # Request counting + security headers + JSON logging
-
-# 7. Endpoints
-@app.post("/ask")
-async def ask_agent(body, request, _key = Depends(verify_api_key)):
-    check_rate_limit(_key[:8])    # Rate limit
-    check_and_record_cost(...)    # Cost guard
-    answer = llm_ask(body.question)  # LLM call
-    return AskResponse(...)
-
-@app.get("/health")  # Liveness
-@app.get("/ready")   # Readiness
-@app.get("/metrics") # Metrics (protected)
-
-# 8. SIGTERM handler
-signal.signal(signal.SIGTERM, _handle_signal)
+# 6. Per-message: rate limit → cost guard → route
+@cl.on_message
+async def on_message(message):
+    check_rate_limit()   # 10 msg/min sliding window
+    check_budget()       # $5/day cost guard
+    await route(message) # intent detection → handler
 ```
 
 #### `Dockerfile` — Multi-stage Production Build
 
 ```dockerfile
-# Stage 1: Builder (compile dependencies)
+# Stage 1: Builder — install deps
 FROM python:3.11-slim AS builder
 WORKDIR /build
-RUN apt-get update && apt-get install -y gcc libpq-dev && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt .
-RUN pip install --no-cache-dir --user -r requirements.txt
+RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
-# Stage 2: Runtime (lean final image)
-FROM python:3.11-slim AS runtime
-RUN groupadd -r agent && useradd -r -g agent -d /app agent
+# Stage 2: Runtime — slim final image
+FROM python:3.11-slim
 WORKDIR /app
-COPY --from=builder /root/.local /home/agent/.local
-COPY app/ ./app/
-COPY utils/ ./utils/
-RUN chown -R agent:agent /app
-USER agent                          # Non-root
-ENV PATH=/home/agent/.local/bin:$PATH
-ENV PYTHONPATH=/app
-ENV PYTHONDONTWRITEBYTECODE=1       # Không tạo .pyc files
-ENV PYTHONUNBUFFERED=1              # Logs không buffer (thấy ngay)
-EXPOSE 8000
-HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
-    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')" || exit 1
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
+COPY --from=builder /install /usr/local
+COPY . .
+RUN chmod +x start.sh
+
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PORT=8000 HOST=0.0.0.0
+
+# Non-root user
+RUN useradd --system --create-home --uid 1001 appuser \
+    && chown -R appuser:appuser /app
+USER appuser
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:${PORT}/health')" || exit 1
+
+CMD ["./start.sh"]
 ```
 
-**`--workers 2`:** Uvicorn chạy 2 worker processes. Tận dụng 2 CPU cores. Nếu có 4 cores → tăng lên 4 workers. Công thức: `workers = 2 * cpu_count + 1`.
+#### `start.sh` — Chainlit entrypoint
 
-#### `docker-compose.yml` — Local Development Stack
-
-```yaml
-services:
-  agent:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      - ENVIRONMENT=staging
-      - REDIS_URL=redis://redis:6379/0
-    env_file:
-      - .env.local    # Secrets: AGENT_API_KEY, JWT_SECRET (trong .gitignore)
-    depends_on:
-      redis:
-        condition: service_healthy  # Đợi Redis healthy rồi mới start
-    healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
-      interval: 30s
-      retries: 3
-    restart: unless-stopped
-
-  redis:
-    image: redis:7-alpine
-    command: redis-server --maxmemory 128mb --maxmemory-policy allkeys-lru
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 10s
+```bash
+PORT=${PORT:-8000}
+export CHAINLIT_PORT=${PORT}
+exec chainlit run app.py --host "${HOST}" --port "${PORT}" --headless
 ```
 
-**`allkeys-lru`:** Khi Redis đầy (128MB), xóa keys ít được dùng nhất (LRU). Tránh OOM crash.
+Railway inject `PORT` tự động. `start.sh` đảm bảo Chainlit lắng nghe đúng port đó.
 
-#### `.dockerignore` — Tránh Copy File Không Cần
-
-```
-__pycache__/
-*.pyc
-.env          # Secret file — KHÔNG copy vào image!
-.env.*
-!.env.example # Nhưng cho phép .env.example (không chứa secrets)
-venv/
-.git/
-*.md
-tests/
-```
-
-**Quan trọng:** `.env` chứa secrets. Nếu không có `.dockerignore`, `COPY . .` sẽ copy `.env` vào image → secret bị nhúng vào image → nguy hiểm nếu push image lên public registry.
-
-### 7.3 Kết Quả Production Readiness Check
+### 7.3 Kết Quả Production Readiness
 
 ```
 =======================================================
-  Production Readiness Check — Day 12 Lab
+  XanhSM Bot — Production Readiness Checklist
 =======================================================
 
 📁 Required Files
-  ✅ Dockerfile exists
-  ✅ docker-compose.yml exists
-  ✅ .dockerignore exists
-  ✅ .env.example exists
-  ✅ requirements.txt exists
-  ✅ railway.toml or render.yaml exists
+  ✅ Dockerfile (multi-stage build)
+  ✅ docker-compose.yml
+  ✅ .dockerignore
+  ✅ .env.example
+  ✅ requirements.txt
+  ✅ railway.toml + render.yaml
 
 🔒 Security
   ✅ .env in .gitignore
-  ✅ No hardcoded secrets in code
+  ✅ No hardcoded secrets
+  ✅ Non-root user (appuser)
+  ✅ Security headers middleware
 
-🌐 API Endpoints (code check)
-  ✅ /health endpoint defined
-  ✅ /ready endpoint defined
-  ✅ Authentication implemented
-  ✅ Rate limiting implemented
-  ✅ Graceful shutdown (SIGTERM)
-  ✅ Structured logging (JSON)
+🌐 Operations
+  ✅ /health liveness probe (Railway dùng endpoint này)
+  ✅ Graceful shutdown (SIGTERM handler)
+  ✅ Structured JSON logging
 
-🐳 Docker
-  ✅ Multi-stage build
-  ✅ Non-root user
-  ✅ HEALTHCHECK instruction
-  ✅ Slim base image
-  ✅ .dockerignore covers .env
-  ✅ .dockerignore covers __pycache__
+🛡️ Rate Limiting & Cost
+  ✅ Sliding-window rate limiter (10 msg/user/min)
+  ✅ Daily budget guard ($5 USD/ngày)
 
-=======================================================
-  Result: 18/18 checks passed (100%)
-  🎉 PRODUCTION READY! Deploy nào!
 =======================================================
 ```
 
 ### 7.4 Chạy và Test Local
 
 ```bash
-# 1. Setup environment
-cd 06-lab-complete
-cp .env.example .env.local
-# Edit .env.local: đặt AGENT_API_KEY=my-test-key-2026
+# 1. Setup
+cd day12_HanQuangHieu_2A202600056
+cp .env.example .env
+# Edit .env: đặt OPENAI_API_KEY=sk-your-key
 
-# 2. Start stack
+# 2. Start
 docker compose up
 
-# 3. Test health
+# 3. Open browser
+# http://localhost:8000
+
+# 4. Health check
 curl http://localhost:8000/health
-# {"status":"ok","version":"1.0.0","environment":"staging",...}
+# {"status":"ok"}
 
-# 4. Test readiness
-curl http://localhost:8000/ready
-# {"ready":true}
-
-# 5. Test auth fail (no key)
-curl -X POST http://localhost:8000/ask \
-  -H "Content-Type: application/json" \
-  -d '{"question":"Hello"}'
-# HTTP 401: {"detail":"Invalid or missing API key..."}
-
-# 6. Test success
-curl -X POST http://localhost:8000/ask \
-  -H "X-API-Key: my-test-key-2026" \
-  -H "Content-Type: application/json" \
-  -d '{"question":"What is cloud deployment?"}'
-# HTTP 200: {"question":"...","answer":"Deployment là quá trình đưa code...","model":"gpt-4o-mini"}
-
-# 7. Test rate limiting (gọi 22 lần, limit=20)
-for i in {1..22}; do
-  STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-    -H "X-API-Key: my-test-key-2026" \
-    -X POST http://localhost:8000/ask \
-    -H "Content-Type: application/json" \
-    -d "{\"question\":\"Test $i\"}")
-  echo "Request $i: HTTP $STATUS"
-done
-# Request 1-20: HTTP 200
-# Request 21-22: HTTP 429
-
-# 8. Metrics
-curl -H "X-API-Key: my-test-key-2026" http://localhost:8000/metrics
-# {"uptime_seconds":45.2,"total_requests":23,"daily_cost_usd":0.0001,...}
+# 5. Dùng chat UI — nhắn tin thử:
+# "Giá đặt xe từ Hà Nội đi Hội An?"
+# "Tôi muốn đăng ký làm tài xế"
 ```
 
 ---
@@ -1090,7 +983,7 @@ curl -H "X-API-Key: my-test-key-2026" http://localhost:8000/metrics
 | Graceful shutdown | ✅ | ✅ |
 | Docker multi-stage build | ✅ | ✅ |
 | Docker Compose orchestration | ✅ | ✅ |
-| Cloud deployment (Railway/Render) | ✅ | ✅ (documented) |
+| Cloud deployment (Railway/Render) | ✅ | ✅ (live at Railway URL) |
 | API Key authentication | ✅ | ✅ |
 | JWT authentication | ✅ | ✅ |
 | Rate limiting (Sliding Window) | ✅ | ✅ |
